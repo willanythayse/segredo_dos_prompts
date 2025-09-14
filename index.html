@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Transforme Suas Tarefas em Minutos: O Segredo para Usar a IA e Ser Mais Produtivo</title>
+  <meta name="description" content="Domine os Prompts Certos e Acelere Seu Trabalho com a IA. Sem Complicação, Só Resultados." />
+  <meta name="keywords" content="IA, prompts, produtividade, inteligência artificial, automação, trabalho" />
+  <meta name="theme-color" content="#8b5cf6" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Segredo dos Prompts - Transforme Suas Tarefas com IA" />
+  <meta property="og:description" content="Domine os Prompts Certos e Acelere Seu Trabalho com a IA. Sem Complicação, Só Resultados." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=Segredo+dos+Prompts" />
+  <meta property="og:locale" content="pt_BR" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%238b5cf6'/%3E%3Ctext x='50' y='58' font-size='32' text-anchor='middle' fill='white' font-family='Arial,Helvetica,sans-serif'%3EIA%3C/text%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0b1220;
+      --card: #0f172a;
+      --muted: #94a3b8;
+      --text: #e2e8f0;
+      --primary: #8b5cf6;
+      --primary-2: #a78bfa;
+      --accent: #22c55e;
+      --danger: #ef4444;
+      --ring: rgba(167, 139, 250, 0.35);
+      --maxw: 1200px;
+      --radius: 18px;
+      --shadow: 0 10px 30px rgba(2, 6, 23, .55);
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+      background: radial-gradient(1000px 600px at 80% -10%, rgba(167,139,250,.08), transparent),
+                  radial-gradient(700px 300px at -10% 10%, rgba(139,92,246,.10), transparent),
+                  var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--primary-2); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
+
+    /* Announcement */
+    .bar { background: linear-gradient(90deg, var(--primary), var(--primary-2)); color: #1a0b2e; text-align: center; padding: 10px 14px; font-weight: 600; }
+
+    /* Header */
+    header { position: sticky; top: 0; z-index: 50; backdrop-filter: saturate(130%) blur(8px); background: rgba(2,6,23,.6); border-bottom: 1px solid rgba(148,163,184,.12); }
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; }
+    .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; letter-spacing: .3px; }
+    .logo { width: 38px; height: 38px; border-radius: 9px; background: linear-gradient(135deg, var(--primary), var(--primary-2)); display: grid; place-items: center; box-shadow: 0 6px 20px rgba(167,139,250,.3); }
+    .logo span { font-weight: 900; color: #1a0b2e; }
+
+    .menu { display: flex; gap: 16px; align-items: center; }
+    .menu a { color: var(--text); opacity: .85; font-weight: 500; }
+    .menu a:hover { opacity: 1; }
+
+    .btn { display: inline-flex; align-items: center; gap: 10px; border: 0; padding: 12px 18px; border-radius: 999px; font-weight: 700; cursor: pointer; transition: transform .05s ease, box-shadow .2s ease, background .2s ease; }
+    .btn:active { transform: translateY(1px); }
+    .btn-primary { background: linear-gradient(135deg, var(--primary), var(--primary-2)); color: #1a0b2e; box-shadow: 0 10px 25px rgba(167,139,250,.25); }
+    .btn-primary:hover { box-shadow: 0 14px 30px rgba(167,139,250,.35); }
+    .btn-secondary { background: rgba(148,163,184,.12); color: var(--text); border: 1px solid rgba(148,163,184,.18); }
+    .btn-secondary:hover { background: rgba(148,163,184,.2); }
+
+    /* Hero */
+    .hero { padding: 72px 0 36px; position: relative; overflow: hidden; }
+    .hero-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 28px; align-items: center; }
+    h1 { font-size: clamp(28px, 4vw, 56px); line-height: 1.08; margin: 10px 0 16px; font-weight: 800; letter-spacing: -0.02em; }
+    .lead { color: var(--muted); font-size: clamp(16px, 1.7vw, 19px); }
+    .pills { display: flex; flex-wrap: wrap; gap: 10px; margin: 18px 0 26px; }
+    .pill { padding: 6px 12px; border-radius: 999px; background: rgba(148,163,184,.12); border: 1px solid rgba(148,163,184,.18); font-size: 13px; color: var(--text); }
+    .hero-cta { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; margin-top: 8px; }
+    .kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 24px; }
+    .kpi { background: rgba(15, 23, 42, .7); border: 1px solid rgba(148,163,184,.12); border-radius: var(--radius); padding: 14px; text-align: center; box-shadow: var(--shadow); }
+    .kpi b { display: block; font-size: 20px; }
+    .kpi span { color: var(--muted); font-size: 12px; }
+
+    /* Mock dashboard */
+    .mock { background: linear-gradient(180deg, rgba(15,23,42,.9), rgba(15,23,42,.6)); border: 1px solid rgba(148,163,184,.15); border-radius: 22px; padding: 18px; box-shadow: var(--shadow); }
+    .mock .top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+    .dots { display:inline-flex; gap:6px; }
+    .dot { width: 10px; height: 10px; border-radius: 50%; background: rgba(148,163,184,.3); }
+    .chart { height: 220px; background: linear-gradient(90deg, rgba(139,92,246,.15), rgba(167,139,250,.08)); border: 1px dashed rgba(148,163,184,.2); border-radius: 14px; display: grid; place-items: center; color: var(--muted); font-size: 14px; }
+
+    /* Sections */
+    section { padding: 72px 0; }
+    .eyebrow { letter-spacing: .18em; text-transform: uppercase; font-size: 12px; color: var(--primary-2); font-weight: 800; }
+    h2 { font-size: clamp(22px, 3vw, 36px); margin: 10px 0 20px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    .card { background: var(--card); border: 1px solid rgba(148,163,184,.12); border-radius: var(--radius); padding: 20px; box-shadow: var(--shadow); }
+    .card h3 { margin: 6px 0 8px; font-size: 18px; }
+    .muted { color: var(--muted); }
+
+    /* Steps */
+    .steps { counter-reset: step; display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .step { background: linear-gradient(180deg, rgba(2,6,23,.7), rgba(2,6,23,.5)); border: 1px solid rgba(148,163,184,.12); border-radius: var(--radius); padding: 20px; position: relative; }
+    .step:before { counter-increment: step; content: counter(step); position: absolute; top: -14px; left: -14px; width: 40px; height: 40px; border-radius: 10px; display: grid; place-items: center; background: linear-gradient(135deg, var(--primary), var(--primary-2)); color: #1a0b2e; font-weight: 900; box-shadow: 0 10px 20px rgba(167,139,250,.25); }
+
+    /* Benefits */
+    .benefits { columns: 2; column-gap: 18px; }
+    .benefits li { break-inside: avoid; list-style: none; background: rgba(148,163,184,.08); border: 1px solid rgba(148,163,184,.14); padding: 12px 14px; border-radius: 12px; margin: 8px 0; }
+
+    /* Testimonials */
+    .quotes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .quote { background: linear-gradient(180deg, rgba(15,23,42,.85), rgba(15,23,42,.6)); border: 1px solid rgba(148,163,184,.12); border-radius: var(--radius); padding: 20px; position: relative; }
+    .quote:after { content: '"'; position: absolute; font-size: 60px; opacity: .08; right: 16px; top: -18px; }
+
+    /* Guarantee */
+    .guarantee-box { background: radial-gradient(600px 220px at 50% -10%, rgba(167,139,250,.08), transparent), var(--card); border: 1px solid rgba(148,163,184,.18); border-radius: 22px; padding: 24px; box-shadow: var(--shadow); text-align: center; margin: 20px 0; }
+    .guarantee-box h3 { color: var(--primary-2); margin-bottom: 16px; }
+
+    /* CTA Section */
+    .cta-section { background: linear-gradient(135deg, var(--primary), var(--primary-2)); color: #1a0b2e; text-align: center; padding: 60px 0; }
+    .cta-section h2 { color: #1a0b2e; }
+    .cta-section p { color: #1a0b2e; opacity: 0.8; }
+
+    /* Footer */
+    footer { border-top: 1px solid rgba(148,163,184,.12); padding: 36px 0; color: var(--muted); }
+
+    /* Sticky CTA Mobile */
+    .sticky-cta { position: fixed; bottom: 12px; left: 12px; right: 12px; display: none; padding: 10px; background: rgba(2,6,23,.75); backdrop-filter: blur(8px); border: 1px solid rgba(148,163,184,.18); border-radius: 16px; box-shadow: var(--shadow); z-index: 60; }
+    .sticky-cta .btn { width: 100%; justify-content: center; }
+
+    /* Responsive */
+    @media (max-width: 980px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .grid-3 { grid-template-columns: 1fr; }
+      .grid-2 { grid-template-columns: 1fr; }
+      .steps { grid-template-columns: 1fr; }
+      .quotes { grid-template-columns: 1fr; }
+      .benefits { columns: 1; }
+      .kpis { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .sticky-cta { display: block; }
+      .menu .hide-sm { display: none; }
+      
+      /* Responsividade para seção de preços */
+      .pricing-grid { grid-template-columns: 1fr !important; gap: 20px !important; }
+      .pricing-total { margin-top: 20px !important; }
+    }
+    
+    @media (max-width: 768px) {
+      .pricing-grid { 
+        grid-template-columns: 1fr !important; 
+        gap: 15px !important; 
+      }
+      .pricing-total { 
+        min-width: auto !important; 
+        margin-top: 20px !important; 
+      }
+      
+      /* Responsividade para comparação de valores */
+      .pricing-comparison { 
+        grid-template-columns: 1fr !important; 
+        gap: 20px !important; 
+      }
+    }
+  </style>
+</head>
+<body>
+  <noscript>Ative o JavaScript para melhor experiência nesta página.</noscript>
+
+  <div class="bar">
+    🚀 Oferta limitada — apenas 50 vagas com bônus exclusivo. Garanta sua vaga no Segredo dos Prompts.
+  </div>
+
+  <header>
+    <div class="container nav">
+      <div class="brand" aria-label="Segredo dos Prompts">
+        <div class="logo" aria-hidden="true"><span>IA</span></div>
+        <span>Segredo dos Prompts</span>
+      </div>
+      <nav class="menu" aria-label="Navegação principal">
+        <a class="hide-sm" href="#problemas">Problema</a>
+        <a class="hide-sm" href="#como-funciona">Como funciona</a>
+        <a class="hide-sm" href="#beneficios">Benefícios</a>
+        <a class="hide-sm" href="#depoimentos">Depoimentos</a>
+        <a class="btn btn-primary" href="#comprar">Quero dominar a IA agora</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="topo">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Torne-se um Mestre em IA</div>
+          <h1>Transforme suas tarefas em <span style="background:linear-gradient(135deg,var(--primary),var(--primary-2));-webkit-background-clip:text;background-clip:text;color:transparent">minutos com IA</span>.</h1>
+          <p class="lead">Domine os Prompts Certos e Acelere Seu Trabalho com a IA. Sem Complicação, Só Resultados.</p>
+          <div class="pills">
+            <span class="pill">Prompts testados</span>
+            <span class="pill">Resultados imediatos</span>
+            <span class="pill">Sem complicação</span>
+            <span class="pill">Produtividade 10x</span>
+          </div>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#comprar">Quero dominar os prompts agora</a>
+            <a class="btn btn-secondary" href="#como-funciona">Ver como funciona</a>
+          </div>
+          <div class="kpis" aria-label="Benefícios rápidos">
+            <div class="kpi"><b>Economize</b><span>horas de trabalho</span></div>
+            <div class="kpi"><b>Automatize</b><span>tarefas repetitivas</span></div>
+            <div class="kpi"><b>Faça mais</b><span>em menos tempo</span></div>
+          </div>
+        </div>
+        <div class="mock" aria-label="Exemplo de uso da IA">
+          <div class="top"><div class="dots"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div><span class="muted">IA Assistant • Exemplo</span></div>
+          <div class="chart">Seu preview de produtividade com IA (substitua por imagem do seu resultado).</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROMESSA -->
+    <section class="promise">
+      <div class="container">
+        <div class="eyebrow">Você está pronto?</div>
+        <h2>Você está pronto para finalmente dominar a IA e usar seus novos conhecimentos para acelerar tarefas que antes pareciam impossíveis?</h2>
+        <p class="lead">Este eBook vai te ensinar a criar os prompts certos para transformar seu trabalho.</p>
+      </div>
+    </section>
+
+    <!-- PROBLEMAS -->
+    <section id="problemas">
+      <div class="container">
+        <div class="eyebrow">Você se identifica?</div>
+        <h2>Dores comuns que impedem a produtividade com IA</h2>
+        <div class="grid-3">
+          <div class="card"><h3>IA parece complicada</h3><p class="muted">Tentou usar mas o processo parecia difícil demais para ser eficiente.</p></div>
+          <div class="card"><h3>Prompts genéricos</h3><p class="muted">Usa prompts básicos que não entregam resultados profissionais.</p></div>
+          <div class="card"><h3>Perde tempo testando</h3><p class="muted">Gasta horas tentando descobrir o prompt certo para cada tarefa.</p></div>
+          <div class="card"><h3>Resultados inconsistentes</h3><p class="muted">Às vezes funciona, às vezes não — sem saber o porquê.</p></div>
+          <div class="card"><h3>Falta de estratégia</h3><p class="muted">Não sabe como integrar IA no fluxo de trabalho de forma eficiente.</p></div>
+          <div class="card"><h3>Medo de substituição</h3><p class="muted">Acha que IA é só para especialistas ou vai substituir seu trabalho.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMO FUNCIONA -->
+    <section id="como-funciona">
+      <div class="container">
+        <div class="eyebrow">O Método</div>
+        <h2>Três etapas simples para dominar a IA e acelerar seu trabalho</h2>
+        <div class="steps">
+          <div class="step">
+            <h3>1. Aprender</h3>
+            <p class="muted">Domine os prompts certos para cada tipo de tarefa. Templates testados e aprovados para resultados imediatos.</p>
+          </div>
+          <div class="step">
+            <h3>2. Aplicar</h3>
+            <p class="muted">Use os prompts no seu trabalho diário. Automatize tarefas repetitivas e acelere processos complexos.</p>
+          </div>
+          <div class="step">
+            <h3>3. Multiplicar</h3>
+            <p class="muted">Veja sua produtividade aumentar exponencialmente. Faça em minutos o que antes levava horas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BENEFÍCIOS CENTRAL -->
+    <section id="beneficios">
+      <div class="container">
+        <div class="eyebrow">Benefício Principal</div>
+        <h2>Ganho de Tempo Imediato</h2>
+        <div class="guarantee-box">
+          <h3>Economize horas de trabalho, automatize tarefas repetitivas e faça mais em menos tempo com IA</h3>
+          <p class="muted">O tempo que você investe no aprendizado retorna rapidamente em produtividade. Resultados em minutos, não em meses.</p>
+          <div class="grid-3" style="margin-top: 30px;">
+            <div class="kpi">
+              <b>⚡</b>
+              <span>Resultados em minutos</span>
+            </div>
+            <div class="kpi">
+              <b>🎯</b>
+              <span>Prompts testados e aprovados</span>
+            </div>
+            <div class="kpi">
+              <b>📈</b>
+              <span>Produtividade aumentada</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEPOIMENTOS -->
+    <section id="depoimentos">
+      <div class="container">
+        <div class="eyebrow">Prova social</div>
+        <h2>Profissionais que aceleraram seu trabalho com IA</h2>
+        <div class="quotes">
+          <div class="quote">
+            <p>"Eu consegui reduzir o tempo de produção de páginas em 80%, usando os prompts certos!"</p>
+            <p class="muted">— Joana M., Designer Freelancer</p>
+          </div>
+          <div class="quote">
+            <p>"Aplicando o que aprendi no eBook, aumentei minha produtividade em 60% e comecei a entregar mais para meus clientes."</p>
+            <p class="muted">— Pedro T., Consultor de Marketing Digital</p>
+          </div>
+          <div class="quote">
+            <p>"Finalmente entendi como usar IA de forma profissional. Meu trabalho nunca foi tão eficiente."</p>
+            <p class="muted">— Maria S., Redatora</p>
+          </div>
+        </div>
+        <p class="muted" style="margin-top:10px">Os relatos acima são exemplos ilustrativos de benefícios típicos. Resultados específicos dependem de contexto e execução.</p>
+      </div>
+    </section>
+
+    <!-- GARANTIA + OFERTA -->
+    <section id="comprar">
+      <div class="container">
+        <div class="eyebrow">Oferta</div>
+        <h2>Garanta sua vaga no Segredo dos Prompts</h2>
+        
+        <!-- Comparação de Valores -->
+        <div class="pricing-comparison" style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 40px;">
+          <!-- Grupo 1: Valor Original -->
+          <div class="card" style="background: rgba(148,163,184,.05); border: 1px solid rgba(148,163,184,.2);">
+            <h3 style="color: var(--muted); text-decoration: line-through; margin-bottom: 20px; text-align: center;">Valor Original</h3>
+            <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px;">
+              <div style="display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid rgba(148,163,184,.1);">
+                <span><b>eBook completo:</b></span>
+                <span class="muted" style="font-weight: 600;">R$ 297</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid rgba(148,163,184,.1);">
+                <span><b>Checklist rápido:</b></span>
+                <span class="muted" style="font-weight: 600;">R$ 97</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid rgba(148,163,184,.1);">
+                <span><b>Pacote de prompts prontos:</b></span>
+                <span class="muted" style="font-weight: 600;">R$ 197</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid rgba(148,163,184,.1);">
+                <span><b>Mini guia de automação:</b></span>
+                <span class="muted" style="font-weight: 600;">R$ 147</span>
+              </div>
+            </div>
+            <div style="text-align: center; padding: 15px; background: rgba(148,163,184,.1); border-radius: 8px; border-top: 2px solid rgba(148,163,184,.3);">
+              <div style="font-size: 14px; color: var(--muted); margin-bottom: 5px;">Valor total:</div>
+              <div style="font-size: 28px; font-weight: 900; color: var(--muted); text-decoration: line-through;">R$ 738</div>
+            </div>
+          </div>
+
+          <!-- Grupo 2: Preço com Desconto -->
+          <div class="card" style="background: radial-gradient(600px 220px at 50% -10%, rgba(139,92,246,.08), transparent), var(--card); border: 2px solid var(--primary); position: relative;">
+            <div style="position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background: var(--primary); color: #1a0b2e; padding: 6px 16px; border-radius: 20px; font-size: 12px; font-weight: 700;">
+              OFERTA ESPECIAL
+            </div>
+            <h3 style="color: var(--primary-2); margin-bottom: 20px; text-align: center;">Preço Promocional</h3>
+            
+            <!-- Preço principal -->
+            <div style="text-align: center; margin-bottom: 20px;">
+              <div style="font-size: 14px; color: var(--muted); margin-bottom: 5px;">Por apenas:</div>
+              <div style="font-size: 48px; font-weight: 900; color: var(--primary-2); margin-bottom: 10px;">R$ 97</div>
+              <div style="font-size: 12px; color: var(--muted);">à vista ou em até 12x no cartão</div>
+            </div>
+
+            <!-- Economia -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 20px;">
+              <div style="text-align: center; padding: 12px; background: rgba(34,193,95,.1); border-radius: 8px; border: 1px solid rgba(34,193,95,.3);">
+                <div style="font-size: 12px; color: var(--muted); margin-bottom: 4px;">Economize:</div>
+                <div style="font-size: 20px; font-weight: 700; color: #22c55e;">R$ 641</div>
+              </div>
+              <div style="text-align: center; padding: 12px; background: rgba(245,158,11,.1); border-radius: 8px; border: 1px solid rgba(245,158,11,.3);">
+                <div style="font-size: 12px; color: var(--muted); margin-bottom: 4px;">Desconto de:</div>
+                <div style="font-size: 20px; font-weight: 700; color: #f59e0b;">87%</div>
+              </div>
+            </div>
+
+            <!-- Produtos incluídos -->
+            <div style="margin-bottom: 20px;">
+              <div style="font-size: 14px; color: var(--primary-2); font-weight: 600; margin-bottom: 10px; text-align: center;">✅ Todos os produtos incluídos:</div>
+              <div style="display: flex; flex-direction: column; gap: 8px;">
+                <div style="display: flex; align-items: center; gap: 8px; font-size: 14px;">
+                  <span style="color: var(--accent);">✓</span>
+                  <span>eBook completo</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 8px; font-size: 14px;">
+                  <span style="color: var(--accent);">✓</span>
+                  <span>Checklist rápido</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 8px; font-size: 14px;">
+                  <span style="color: var(--accent);">✓</span>
+                  <span>Pacote de prompts prontos</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 8px; font-size: 14px;">
+                  <span style="color: var(--accent);">✓</span>
+                  <span>Mini guia de automação</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Preço e Forma de Pagamento
+        <div class="guarantee-box" style="background: radial-gradient(600px 220px at 50% -10%, rgba(34,193,95,.08), transparent), var(--card); border-color: rgba(34,193,95,.3);">
+          <h3 style="color: #22c55e;">💸 Preço e Forma de Pagamento</h3>
+          <p class="muted" style="margin-bottom: 20px;">Por tempo limitado, todo o pacote sai por apenas:</p>
+          <div style="text-align: center; margin: 30px 0;">
+            <div style="font-size: 48px; font-weight: 900; color: var(--primary-2); margin-bottom: 10px;">👉 R$ 97 à vista</div>
+            <p class="muted" style="font-size: 18px;">ou em até 12x no cartão (valor acessível para todos os perfis).</p>
+            <p class="muted" style="margin-top: 15px; font-style: italic;">Isso significa pagar menos que um café por dia para dominar a habilidade mais desejada do mercado atual.</p>
+          </div>
+        </div> -->
+
+        <!-- Garantia -->
+        <div class="guarantee-box">
+          <h3>🛡️ Garantia de 7 Dias – Sem Risco!</h3>
+          <p class="muted">Se você não ver resultados no uso dos prompts, nós garantimos seu dinheiro de volta.</p>
+        </div>
+
+        <!-- Oferta Limitada -->
+        <div class="guarantee-box" style="background: radial-gradient(600px 220px at 50% -10%, rgba(245,158,11,.08), transparent), var(--card); border-color: rgba(245,158,11,.3);">
+          <h3 style="color: #f59e0b;">⚡ Oferta Limitada!</h3>
+          <p class="muted">As primeiras 50 compras recebem um bônus exclusivo de templates de prompts prontos para começar a usar imediatamente!</p>
+        </div>
+
+        <div style="text-align: center; margin: 40px 0;">
+          <a class="btn btn-primary" href="#checkout" style="font-size: 18px; padding: 16px 32px;">Sim, Quero Aprender a Usar IA Agora e Aumentar Minha Produtividade!</a>
+          <p class="muted" style="margin-top: 16px; font-weight: 600; color: #f59e0b;">🔥 Apenas 50 vagas disponíveis com bônus exclusivo!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMO FUNCIONA DETALHADO -->
+    <section class="how-it-works">
+      <div class="container">
+        <div class="eyebrow">Processo</div>
+        <h2>Como Funciona?</h2>
+        <p class="lead">Adquira o eBook e, em minutos, comece a aplicar os conhecimentos. Cada capítulo vem com exemplos práticos e templates que podem ser usados no seu trabalho. Não é necessário esperar: ao comprar, o conteúdo está disponível para você começar a transformar seu trabalho imediatamente.</p>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section id="newsletter" style="background: var(--card); border-top: 1px solid rgba(148,163,184,.12);">
+      <div class="container">
+        <div class="grid-2" style="align-items: center;">
+          <div>
+            <h2>Fique por dentro das novidades</h2>
+            <p class="muted">Receba dicas exclusivas sobre IA, prompts e produtividade diretamente no seu e-mail.</p>
+          </div>
+          <div class="card" style="background: rgba(139,92,246,.05); border: 1px solid rgba(139,92,246,.2);">
+            <form id="newsletter-form" onsubmit="event.preventDefault(); handleNewsletterSubmit();">
+              <div style="display: grid; gap: 12px;">
+                <input 
+                  required 
+                  type="email" 
+                  name="email" 
+                  placeholder="Seu melhor e-mail" 
+                  aria-label="Seu e-mail" 
+                  style="padding: 12px 16px; border-radius: 12px; border: 1px solid rgba(148,163,184,.25); background: var(--bg); color: var(--text); font-size: 16px;"
+                />
+                <input 
+                  required 
+                  type="text" 
+                  name="name" 
+                  placeholder="Seu nome" 
+                  aria-label="Seu nome" 
+                  style="padding: 12px 16px; border-radius: 12px; border: 1px solid rgba(148,163,184,.25); background: var(--bg); color: var(--text); font-size: 16px;"
+                />
+                <button 
+                  class="btn btn-primary" 
+                  type="submit" 
+                  style="width: 100%; justify-content: center;"
+                >
+                  Quero receber as dicas
+                </button>
+              </div>
+              <p class="muted" style="margin-top: 12px; font-size: 14px;">
+                🔒 Seus dados estão seguros. Não enviamos spam.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div style="display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between">
+        <div style="display:flex;align-items:center;gap:10px">
+          <div class="logo" aria-hidden="true"><span>IA</span></div>
+          <div>
+            <div style="font-weight:800">Segredo dos Prompts</div>
+            <div class="muted">© <span id="year"></span> Todos os direitos reservados.</div>
+          </div>
+        </div>
+        <div class="muted" style="display:flex;gap:12px;flex-wrap:wrap">
+          <a href="#" aria-label="Termos de uso">Termos</a>
+          <a href="#" aria-label="Política de privacidade">Privacidade</a>
+          <a href="#contato" aria-label="Contato">Contato</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Sticky CTA Mobile -->
+  <div class="sticky-cta" aria-hidden="true">
+    <a class="btn btn-primary" href="#comprar">Quero dominar a IA agora</a>
+  </div>
+
+  <script>
+    // Ano no rodapé
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Smooth scroll para links internos
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const id = a.getAttribute('href');
+        if (id.length > 1) {
+          e.preventDefault();
+          document.querySelector(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // Captura de UTM → adiciona aos links de checkout
+    const params = new URLSearchParams(window.location.search);
+    const utm = ['utm_source','utm_medium','utm_campaign','utm_content','utm_term']
+      .reduce((acc,k)=>{ if(params.get(k)) acc.push(`${k}=${encodeURIComponent(params.get(k))}`); return acc; },[])
+      .join('&');
+    if (utm) {
+      document.querySelectorAll('a[href^="#checkout"]').forEach(a => {
+        const base = 'https://seu-checkout-aqui.com'; // ⬅️ substitua pelo seu link real
+        a.href = base + (base.includes('?') ? '&' : '?') + utm;
+      });
+    }
+
+    // Função para lidar com o formulário de newsletter
+    function handleNewsletterSubmit() {
+      const form = document.getElementById('newsletter-form');
+      const formData = new FormData(form);
+      const email = formData.get('email');
+      const name = formData.get('name');
+      
+      // Aqui você pode integrar com seu provedor de email marketing
+      // Exemplo: Mailchimp, ConvertKit, RD Station, etc.
+      
+      // Simulação de sucesso (substitua pela integração real)
+      alert(`Obrigado, ${name}! Você foi cadastrado com sucesso na nossa newsletter.`);
+      
+      // Limpar o formulário
+      form.reset();
+      
+      // Aqui você pode adicionar tracking de conversão
+      // gtag('event', 'newsletter_signup', {
+      //   'event_category': 'engagement',
+      //   'event_label': 'newsletter'
+      // });
+    }
+
+    // Adicionar validação em tempo real
+    document.getElementById('newsletter-form').addEventListener('input', function(e) {
+      const email = document.querySelector('input[name="email"]');
+      const name = document.querySelector('input[name="name"]');
+      const button = document.querySelector('#newsletter-form button');
+      
+      if (email.value && name.value) {
+        button.disabled = false;
+        button.style.opacity = '1';
+      } else {
+        button.disabled = true;
+        button.style.opacity = '0.6';
+      }
+    });
+  </script>
+</body>
+</html>
