@@ -3,23 +3,78 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Transforme Suas Tarefas em Minutos: O Segredo para Usar a IA e Ser Mais Produtivo</title>
-  <meta name="description" content="Domine os Prompts Certos e Acelere Seu Trabalho com a IA. Sem Complicação, Só Resultados." />
-  <meta name="keywords" content="IA, prompts, produtividade, inteligência artificial, automação, trabalho" />
+  <title>Chatbots de IA e Prompts Profissionais | Acelere Tarefas e Vendas | Gestyse</title>
+  <meta name="description" content="Aumente sua produtividade e vendas com IA. Prompts prontos, automação e chatbots inteligentes para WhatsApp e Web. Checkout seguro e suporte." />
+  <meta name="keywords" content="chatbot inteligente, IA no WhatsApp, prompts, produtividade, inteligência artificial, automação, vendas, atendimento" />
   <meta name="theme-color" content="#8b5cf6" />
+  <link rel="canonical" href="https://ia.gestyse.com/" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Segredo dos Prompts - Transforme Suas Tarefas com IA" />
-  <meta property="og:description" content="Domine os Prompts Certos e Acelere Seu Trabalho com a IA. Sem Complicação, Só Resultados." />
+  <meta property="og:title" content="Chatbots de IA e Prompts Profissionais | Gestyse" />
+  <meta property="og:description" content="Aumente produtividade e vendas com chatbots de IA e prompts prontos. Integração com WhatsApp e site." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=Segredo+dos+Prompts" />
+  <meta property="og:image" content="https://ia.gestyse.com/og-image.jpg" />
+  <meta property="og:image:alt" content="Chatbots de IA Gestyse" />
+  <meta property="og:url" content="https://ia.gestyse.com/" />
+  <meta property="og:site_name" content="Gestyse" />
   <meta property="og:locale" content="pt_BR" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Chatbots de IA e Prompts Profissionais | Gestyse" />
+  <meta name="twitter:description" content="Automatize atendimento e vendas com IA. Prompts prontos e integração WhatsApp/Web." />
+  <meta name="twitter:image" content="https://ia.gestyse.com/og-image.jpg" />
+  <meta name="twitter:site" content="@gestyse" />
 
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%238b5cf6'/%3E%3Ctext x='50' y='58' font-size='32' text-anchor='middle' fill='white' font-family='Arial,Helvetica,sans-serif'%3EIA%3C/text%3E%3C/svg%3E" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- JSON-LD: Product -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Segredo dos Prompts (eBook)",
+    "brand": {"@type":"Brand","name":"Gestyse"},
+    "description": "eBook com prompts profissionais e frameworks para aumentar produtividade com IA.",
+    "url": "https://ia.gestyse.com/",
+    "image": "https://ia.gestyse.com/og-image.jpg",
+    "offers": {
+      "@type": "Offer",
+      "price": "119.90",
+      "priceCurrency": "BRL",
+      "availability": "https://schema.org/InStock",
+      "url": "https://ia.gestyse.com/"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "37"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Como recebo o eBook após a compra?",
+        "acceptedAnswer": {"@type":"Answer","text":"O acesso é enviado por e-mail imediatamente após a confirmação do pagamento, com link para download e materiais bônus."}
+      },
+      {
+        "@type": "Question",
+        "name": "Posso usar no trabalho do dia a dia?",
+        "acceptedAnswer": {"@type":"Answer","text":"Sim. Inclui prompts prontos e frameworks para marketing, conteúdo, pesquisa, atendimento e automação."}
+      }
+    ]
+  }
+  </script>
 
   <style>
     :root {
@@ -169,6 +224,16 @@
         gap: 20px !important; 
       }
     }
+
+    /* WhatsApp Floating Button */
+    .whatsapp-float{
+      position:fixed; right:16px; bottom:16px; z-index:1000;
+      width:56px; height:56px; border-radius:50%;
+      background:#25D366; display:flex; align-items:center; justify-content:center;
+      box-shadow:0 8px 24px rgba(0,0,0,.2);
+    }
+    .whatsapp-float:hover{ filter:brightness(0.95); }
+    @media (max-width:480px){ .whatsapp-float{ right:12px; bottom:12px; } }
   </style>
 </head>
 <body>
@@ -431,7 +496,7 @@
         </div>
 
         <div style="text-align: center; margin: 40px 0;">
-          <a class="btn btn-primary" href="#checkout" style="font-size: 18px; padding: 16px 32px;">Sim, Quero Aprender a Usar IA Agora e Aumentar Minha Produtividade!</a>
+          <a class="btn btn-primary" data-checkout href="https://buy.stripe.com/SEU_LINK" rel="nofollow noopener" style="font-size: 18px; padding: 16px 32px;">Sim, Quero Aprender a Usar IA Agora e Aumentar Minha Produtividade!</a>
           <p class="muted" style="margin-top: 16px; font-weight: 600; color: #f59e0b;">🔥 Apenas 50 vagas disponíveis com bônus exclusivo!</p>
         </div>
       </div>
@@ -455,12 +520,12 @@
             <p class="muted">Receba dicas exclusivas sobre IA, prompts e produtividade diretamente no seu e-mail.</p>
           </div>
           <div class="card" style="background: rgba(139,92,246,.05); border: 1px solid rgba(139,92,246,.2);">
-            <form id="newsletter-form" onsubmit="event.preventDefault(); handleNewsletterSubmit();">
+            <form id="newsletter-form" action="https://gestyse.us21.list-manage.com/subscribe/post?u=YOUR_U&id=YOUR_ID" method="post" target="_blank" novalidate>
               <div style="display: grid; gap: 12px;">
                 <input 
                   required 
                   type="email" 
-                  name="email" 
+                  name="EMAIL" 
                   placeholder="Seu melhor e-mail" 
                   aria-label="Seu e-mail" 
                   style="padding: 12px 16px; border-radius: 12px; border: 1px solid rgba(148,163,184,.25); background: var(--bg); color: var(--text); font-size: 16px;"
@@ -468,11 +533,14 @@
                 <input 
                   required 
                   type="text" 
-                  name="name" 
+                  name="FNAME" 
                   placeholder="Seu nome" 
                   aria-label="Seu nome" 
                   style="padding: 12px 16px; border-radius: 12px; border: 1px solid rgba(148,163,184,.25); background: var(--bg); color: var(--text); font-size: 16px;"
                 />
+                <div style="position:absolute; left:-5000px" aria-hidden="true" hidden>
+                  <input type="text" name="b_YOUR_U_YOUR_ID" tabindex="-1" value="">
+                </div>
                 <button 
                   class="btn btn-primary" 
                   type="submit" 
@@ -530,55 +598,29 @@
       });
     });
 
-    // Captura de UTM → adiciona aos links de checkout
-    const params = new URLSearchParams(window.location.search);
-    const utm = ['utm_source','utm_medium','utm_campaign','utm_content','utm_term']
-      .reduce((acc,k)=>{ if(params.get(k)) acc.push(`${k}=${encodeURIComponent(params.get(k))}`); return acc; },[])
-      .join('&');
-    if (utm) {
-      document.querySelectorAll('a[href^="#checkout"]').forEach(a => {
-        const base = 'https://seu-checkout-aqui.com'; // ⬅️ substitua pelo seu link real
-        a.href = base + (base.includes('?') ? '&' : '?') + utm;
+    // Checkout link com UTMs preservados
+    (function(){
+      const CHECKOUT_BASE = 'https://buy.stripe.com/SEU_LINK'; // substitua pelo seu Payment Link
+      const params = new URLSearchParams(window.location.search);
+      const utm = ['utm_source','utm_medium','utm_campaign','utm_content','utm_term']
+        .reduce((acc,k)=>{ const v = params.get(k); if(v) acc.push(`${k}=${encodeURIComponent(v)}`); return acc; },[])
+        .join('&');
+      document.querySelectorAll('[data-checkout]').forEach(a => {
+        a.href = CHECKOUT_BASE + (utm ? (CHECKOUT_BASE.includes('?') ? '&' : '?') + utm : '');
+        a.addEventListener('click', function(){
+          if (window.dataLayer) { window.dataLayer.push({ event: 'begin_checkout', method: 'payment_link' }); }
+        });
       });
-    }
+    })();
 
-    // Função para lidar com o formulário de newsletter
-    function handleNewsletterSubmit() {
-      const form = document.getElementById('newsletter-form');
-      const formData = new FormData(form);
-      const email = formData.get('email');
-      const name = formData.get('name');
-      
-      // Aqui você pode integrar com seu provedor de email marketing
-      // Exemplo: Mailchimp, ConvertKit, RD Station, etc.
-      
-      // Simulação de sucesso (substitua pela integração real)
-      alert(`Obrigado, ${name}! Você foi cadastrado com sucesso na nossa newsletter.`);
-      
-      // Limpar o formulário
-      form.reset();
-      
-      // Aqui você pode adicionar tracking de conversão
-      // gtag('event', 'newsletter_signup', {
-      //   'event_category': 'engagement',
-      //   'event_label': 'newsletter'
-      // });
-    }
-
-    // Adicionar validação em tempo real
-    document.getElementById('newsletter-form').addEventListener('input', function(e) {
-      const email = document.querySelector('input[name="email"]');
-      const name = document.querySelector('input[name="name"]');
-      const button = document.querySelector('#newsletter-form button');
-      
-      if (email.value && name.value) {
-        button.disabled = false;
-        button.style.opacity = '1';
-      } else {
-        button.disabled = true;
-        button.style.opacity = '0.6';
-      }
-    });
+    // Newsletter via Mailchimp (HTML POST) — sem JS necessário
   </script>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/5599999999999?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20chatbots%20inteligentes." class="whatsapp-float" aria-label="Fale conosco no WhatsApp" rel="nofollow noopener" onclick="window.dataLayer&&window.dataLayer.push({event:'click',event_category:'whatsapp',event_label:'floating_button'})">
+    <svg width="26" height="26" viewBox="0 0 32 32" fill="#fff" aria-hidden="true" focusable="false">
+      <path d="M19.11 17.54c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.62.14-.18.27-.71.88-.87 1.06-.16.18-.32.2-.59.07-.27-.14-1.13-.41-2.15-1.31-.79-.7-1.32-1.56-1.48-1.82-.16-.27-.02-.41.12-.54.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.62-1.5-.85-2.06-.22-.53-.44-.46-.62-.46h-.53c-.18 0-.48.07-.73.34-.25.27-.96.94-.96 2.3 0 1.36.99 2.68 1.13 2.86.14.18 1.95 2.98 4.72 4.18.66.29 1.18.47 1.58.6.66.21 1.26.18 1.73.11.53-.08 1.6-.65 1.82-1.28.23-.63.23-1.18.16-1.29-.07-.11-.25-.18-.52-.32z"/><path d="M16.01 3.2C9.4 3.2 4.04 8.55 4.04 15.17c0 2.63.86 5.07 2.32 7.04L4.8 28.8l6.78-1.51c1.91 1.05 4.11 1.65 6.43 1.65 6.62 0 11.97-5.36 11.97-11.97 0-6.62-5.36-11.97-11.97-11.97zm0 21.78c-1.99 0-3.83-.58-5.37-1.58l-.39-.25-4.03.89.86-3.93-.26-.4a9.76 9.76 0 01-1.62-5.35c0-5.39 4.39-9.78 9.78-9.78s9.78 4.39 9.78 9.78-4.39 9.78-9.78 9.78z"/>
+    </svg>
+  </a>
 </body>
 </html>
